@@ -1,0 +1,240 @@
+{
+  "components": {
+    "schemas": {
+      "User": {
+        "type":"object",
+        "properties": {
+          "property": {
+            "type": "integer"
+          }
+        }
+      },
+      "RecipeCategory": {
+        "type":"object",
+        "properties": {
+          "property": {
+            "type": "integer"
+          }
+        }
+      },
+      "IngredientCategory": {
+        "type":"object",
+        "properties": {
+          "property": {
+            "type": "integer"
+          }
+        }
+      },
+      "Ingredient": {
+        "type":"object",
+        "properties": {
+          "property": {
+            "type": "integer"
+          }
+        }
+      },
+      "Recipe": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 10
+          },
+          "recipeID": {
+            "type": "integer",
+            "format": "int64",
+            "example": 198772
+          }
+        }
+      },
+      "RecipeVersion": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 10
+          },
+          "recipeID": {
+            "type": "integer",
+            "format": "int64",
+            "example": 198772
+          }
+        }
+      }
+    }
+  },
+  "info": {
+    "title": "Title",
+    "description": "Title",
+    "version": "1.0.0"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ingredient/{ingredientId}": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ingredientCategories": {
+      "get": {
+        "description": "List paginated collection of all available ingredient Categories",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ingredientCategory/{ingredientCategoryId}": {
+      "get": {
+        "description": "Details of an Ingredient Category",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ingredients": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/recipe/{recipeId}/history": {
+      "get": {
+        "description": "Provides available old versions of the same Recipe",
+        "parameters": [
+          {
+            "description": "The Recipe ID for which versions are searched",
+            "in": "path",
+            "name": "recipeId",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "startDate",
+            "in": "query",
+            "description": "Get only versions younger than this date",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "description": "Get only versions older than this date",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecipeVersion"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "Recipe not found"
+          }
+        }
+      }
+    },
+    "/recipe/{recipeId}/languageVersions": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/recipeCategories": {
+      "get": {
+        "description": "List paginated collection of all available recipe Categories",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/recipeCategory/{recipeCategoryId}": {
+      "get": {
+        "description": "Details of an recipe Category",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/recipes": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "name": []
+    }
+  ],
+  "servers": [
+    {
+      "url": "https://api.openrecipedb.org/v1",
+      "description": "Live environment"
+    }
+  ]
+}
