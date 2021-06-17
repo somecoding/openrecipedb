@@ -23,6 +23,7 @@ chmod 0777 $LOGFILE
 
 
 #Start Warmup
+composer install --ignore-platform-reqs --prefer-source --no-plugins --no-scripts --optimize-autoloader
 php public/index.php orm:generate-proxies
 php public/index.php reinfi:di cache warmup
 php public/index.php orm:schema-tool:update -f

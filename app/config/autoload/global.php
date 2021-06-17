@@ -13,7 +13,7 @@ return [
             'orm_default' => [
                 'driverClass' => \Doctrine\DBAL\Driver\PDO\MySQL\Driver::class,
                 'params' => [
-                    'host' => 'docker-mysql',
+                    'host' => 'ordb-mysql',
                     'port' => '3306',
                     'user' => 'app',
                     'password' => 'app',

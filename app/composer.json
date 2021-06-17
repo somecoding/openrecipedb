@@ -29,7 +29,7 @@
         }
     ],
     "require": {
-        "php": "^7.3",
+        "php": "^8.0",
         "api-skeletons/oauth2-doctrine-console": "^5.1",
         "api-skeletons/oauth2-doctrine-identity": "^5.0",
         "api-skeletons/oauth2-doctrine-permissions-acl": "^5.0",

@@ -8,7 +8,7 @@
 
 use Laminas\ApiTools\MvcAuth\Factory\NamedOAuth2ServerFactory;
 use Laminas\ApiTools\OAuth2\Service\OAuth2Server;
-
+return [];
 return [
     'service_manager' => [
         'factories' => [

@@ -1,7 +1,7 @@
 version: '3'
 services:
   nginx:
-    container_name: nginx
+    container_name: ordb-nginx
     image: nginx:stable
     ports:
       - "80:80"
@@ -9,12 +9,16 @@ services:
       - ./app/:/www/app
       - ./docker-config/nginx/development.conf:/etc/nginx/conf.d/default.conf
   php-fpm:
-    container_name: php-fpm
+    container_name: ordb-php-fpm
     expose:
       - "9000"
     build:
       context: ./docker-config
       dockerfile: Dockerfile-fpm
+      args:
+        GITHUB_TOKEN: $GITHUB_TOKEN
+        GROUP_ID: $GROUP_ID
+        USER_ID: $USER_ID
     stdin_open: true
     command: /docker/setup.sh
     tty: true
@@ -25,19 +29,19 @@ services:
     environment:
       - APPLICATION_ENV=development
       - PHP_IDE_CONFIG=serverName=php-fpm
-  composer:
-    container_name: composer
-    restart: 'no'
-    image: composer/composer:2
-    command: install --ignore-platform-reqs --prefer-source --no-plugins --no-scripts --optimize-autoloader
-    volumes:
-      - ./app/:/app
+ # composer:
+ #   container_name: ordb-composer
+ #   restart: 'no'
+ #   image: composer/composer:2
+ #   command: install --ignore-platform-reqs --prefer-source --no-plugins --no-scripts --optimize-autoloader
+ #   volumes:
+ #     - ./app/:/app
   mysql:
     ports:
       - "3306:3306"
     expose:
       - "3306"
-    container_name: docker-mysql
+    container_name: ordb-mysql
     image: mariadb:10.5
     environment:
       MYSQL_ROOT_PASSWORD: app
@@ -47,6 +51,6 @@ services:
   redis:
     expose:
       - "6379"
-    container_name: redis
+    container_name: ordb-redis
     image: redis:6
 

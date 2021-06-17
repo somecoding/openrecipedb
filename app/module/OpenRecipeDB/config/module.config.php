@@ -42,13 +42,11 @@ return [
             'collection_name' => 'access_key',
             'entity_http_methods' => [
                 0 => 'GET',
-                1 => 'PATCH',
-                2 => 'PUT',
-                3 => 'DELETE',
+                1 => 'POST',
+                2 => 'DELETE',
             ],
             'collection_http_methods' => [
                 0 => 'GET',
-                1 => 'POST',
             ],
             'collection_query_whitelist' => [],
             'page_size' => 25,
@@ -121,12 +119,28 @@ return [
             'OpenRecipeDB\\V1\\Rpc\\Test\\Controller' => [
                 'actions' => [
                     'test' => [
-                        'GET' => true,
+                        'GET' => false,
                         'POST' => false,
                         'PUT' => false,
                         'PATCH' => false,
                         'DELETE' => false,
                     ],
+                ],
+            ],
+            'OpenRecipeDB\\V1\\Rest\\AccessKey\\Controller' => [
+                'collection' => [
+                    'GET' => true,
+                    'POST' => false,
+                    'PUT' => false,
+                    'PATCH' => false,
+                    'DELETE' => false,
+                ],
+                'entity' => [
+                    'GET' => true,
+                    'POST' => true,
+                    'PUT' => false,
+                    'PATCH' => false,
+                    'DELETE' => true,
                 ],
             ],
         ],

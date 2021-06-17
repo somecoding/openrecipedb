@@ -6,10 +6,6 @@
  * The previous config file has been stored in ./config/modules.config.old
  */
 return [
-    'ApiSkeletons\\OAuth2\\Doctrine\\Identity',
-    'ApiSkeletons\\OAuth2\\Doctrine\\Permissions\\Acl',
-    'ApiSkeletons\\OAuth2\\Doctrine',
-    'ApiSkeletons\\OAuth2\\Doctrine\\Console',
     'Laminas\\Cache',
     'Laminas\\Form',
     'Laminas\\I18n',
@@ -42,4 +38,5 @@ return [
     'OpenRecipeDB',
     'OpenRecipeDBServer',
     'Storage',
+    'Recipe',
 ];
