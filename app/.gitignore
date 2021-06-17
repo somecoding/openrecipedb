@@ -4,5 +4,8 @@
 /vendor/
 config/development.config.php
 data/cache/*
+data/log/*
+data/DoctrineORMModule/*
+config/modules.config.old
 .phpunit.result.cache
 .phpcs-cache
