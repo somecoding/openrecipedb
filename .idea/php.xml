@@ -164,6 +164,18 @@
       <path value="$PROJECT_DIR$/app/vendor/zfcampus/zf-deploy" />
       <path value="$PROJECT_DIR$/app/vendor/zfcampus/zf-console" />
       <path value="$PROJECT_DIR$/app/vendor/somecoding/ordb-models" />
+      <path value="$PROJECT_DIR$/app/vendor/laminas/laminas-mvc-i18n" />
+      <path value="$PROJECT_DIR$/app/vendor/webmozart/path-util" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/app/vendor/amphp/byte-stream" />
+      <path value="$PROJECT_DIR$/app/vendor/amphp/amp" />
+      <path value="$PROJECT_DIR$/app/vendor/psalm/plugin-phpunit" />
+      <path value="$PROJECT_DIR$/app/vendor/netresearch/jsonmapper" />
+      <path value="$PROJECT_DIR$/app/vendor/vimeo/psalm" />
+      <path value="$PROJECT_DIR$/app/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/app/vendor/felixfbecker/advanced-json-rpc" />
+      <path value="$PROJECT_DIR$/app/vendor/felixfbecker/language-server-protocol" />
+      <path value="$PROJECT_DIR$/app/vendor/openlss/lib-array2xml" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
@@ -260,7 +272,7 @@
       </server>
     </servers>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="7.4" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.0" />
   <component name="PhpUnit">
     <phpunit_settings>
       <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/app/vendor/autoload.php" />

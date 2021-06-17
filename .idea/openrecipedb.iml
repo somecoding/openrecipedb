@@ -163,6 +163,19 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/zfcampus/zf-deploy" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/zfcampus/zf-console" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/somecoding/ordb-models" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/laminas/laminas-mvc-i18n" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/webmozart/path-util" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/amphp/byte-stream" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/amphp/amp" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/psalm/plugin-phpunit" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/netresearch/jsonmapper" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/vimeo/psalm" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/dnoegel/php-xdg-base-dir" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/felixfbecker/advanced-json-rpc" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/felixfbecker/language-server-protocol" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/openlss/lib-array2xml" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
