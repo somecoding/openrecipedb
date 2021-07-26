@@ -16,13 +16,13 @@ return [
                     ],
                 ],
             ],
-            'open-recipe-db.rpc.test' => [
+            'open-recipe-db.rpc.request-access-key' => [
                 'type' => 'Segment',
                 'options' => [
-                    'route' => '/test',
+                    'route' => '/requestAccessKey',
                     'defaults' => [
-                        'controller' => 'OpenRecipeDB\\V1\\Rpc\\Test\\Controller',
-                        'action' => 'test',
+                        'controller' => 'OpenRecipeDB\\V1\\Rpc\\RequestAccessKey\\Controller',
+                        'action' => 'requestAccessKey',
                     ],
                 ],
             ],
@@ -31,7 +31,7 @@ return [
     'api-tools-versioning' => [
         'uri' => [
             0 => 'open-recipe-db.rest.access-key',
-            1 => 'open-recipe-db.rpc.test',
+            1 => 'open-recipe-db.rpc.request-access-key',
         ],
     ],
     'api-tools-rest' => [
@@ -59,7 +59,7 @@ return [
     'api-tools-content-negotiation' => [
         'controllers' => [
             'OpenRecipeDB\\V1\\Rest\\AccessKey\\Controller' => 'HalJson',
-            'OpenRecipeDB\\V1\\Rpc\\Test\\Controller' => 'Json',
+            'OpenRecipeDB\\V1\\Rpc\\RequestAccessKey\\Controller' => 'HalJson',
         ],
         'accept_whitelist' => [
             'OpenRecipeDB\\V1\\Rest\\AccessKey\\Controller' => [
@@ -67,7 +67,7 @@ return [
                 1 => 'application/hal+json',
                 2 => 'application/json',
             ],
-            'OpenRecipeDB\\V1\\Rpc\\Test\\Controller' => [
+            'OpenRecipeDB\\V1\\Rpc\\RequestAccessKey\\Controller' => [
                 0 => 'application/vnd.open-recipe-db.v1+json',
                 1 => 'application/json',
                 2 => 'application/*+json',
@@ -78,7 +78,7 @@ return [
                 0 => 'application/vnd.open-recipe-db.v1+json',
                 1 => 'application/json',
             ],
-            'OpenRecipeDB\\V1\\Rpc\\Test\\Controller' => [
+            'OpenRecipeDB\\V1\\Rpc\\RequestAccessKey\\Controller' => [
                 0 => 'application/vnd.open-recipe-db.v1+json',
                 1 => 'application/json',
             ],
@@ -102,31 +102,20 @@ return [
     ],
     'controllers' => [
         'factories' => [
-            'OpenRecipeDB\\V1\\Rpc\\Test\\Controller' => \OpenRecipeDB\V1\Rpc\Test\TestControllerFactory::class,
+            'OpenRecipeDB\\V1\\Rpc\\RequestAccessKey\\Controller' => \OpenRecipeDB\V1\Rpc\RequestAccessKey\RequestAccessKeyControllerFactory::class,
         ],
     ],
     'api-tools-rpc' => [
-        'OpenRecipeDB\\V1\\Rpc\\Test\\Controller' => [
-            'service_name' => 'test',
+        'OpenRecipeDB\\V1\\Rpc\\RequestAccessKey\\Controller' => [
+            'service_name' => 'requestAccessKey',
             'http_methods' => [
                 0 => 'GET',
             ],
-            'route_name' => 'open-recipe-db.rpc.test',
+            'route_name' => 'open-recipe-db.rpc.request-access-key',
         ],
     ],
     'api-tools-mvc-auth' => [
         'authorization' => [
-            'OpenRecipeDB\\V1\\Rpc\\Test\\Controller' => [
-                'actions' => [
-                    'test' => [
-                        'GET' => false,
-                        'POST' => false,
-                        'PUT' => false,
-                        'PATCH' => false,
-                        'DELETE' => false,
-                    ],
-                ],
-            ],
             'OpenRecipeDB\\V1\\Rest\\AccessKey\\Controller' => [
                 'collection' => [
                     'GET' => true,
@@ -142,6 +131,31 @@ return [
                     'PATCH' => false,
                     'DELETE' => true,
                 ],
+            ],
+        ],
+    ],
+    'api-tools-content-validation' => [
+        'OpenRecipeDB\\V1\\Rpc\\RequestAccessKey\\Controller' => [
+            'input_filter' => 'OpenRecipeDB\\V1\\Rpc\\RequestAccessKey\\Validator',
+        ],
+    ],
+    'input_filter_specs' => [
+        'OpenRecipeDB\\V1\\Rpc\\RequestAccessKey\\Validator' => [
+            0 => [
+                'required' => true,
+                'validators' => [
+                    0 => [
+                        'name' => \Laminas\Validator\EmailAddress::class,
+                        'options' => [
+                            'useDomainCheck' => true,
+                        ],
+                    ],
+                ],
+                'filters' => [],
+                'name' => 'mail',
+                'description' => 'E-Mail of Service/User requesting AccessKey',
+                'field_type' => 'string',
+                'error_message' => 'Please add a mail',
             ],
         ],
     ],

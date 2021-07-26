@@ -6,13 +6,10 @@
  * The previous config file has been stored in ./config/modules.config.old
  */
 return [
-    //'Laminas\\Cache',
-    //'Laminas\\Form',
     'Laminas\\I18n',
     'Laminas\\Db',
     'Laminas\\Filter',
     'Laminas\\Hydrator',
-    //'Laminas\\Mvc\\Console',
     'Laminas\\InputFilter',
     'Laminas\\Paginator',
     'Laminas\\Router',
@@ -30,12 +27,7 @@ return [
     'Laminas\\ApiTools\\Rpc',
     'Laminas\\ApiTools\\Versioning',
     'EnliteMonolog',
-    //'Reinfi\\DependencyInjection',
     'Laminas\\ApiTools\\Documentation\\Swagger',
     'Application',
     'OpenRecipeDB',
-    //'OpenRecipeDBServer',
-    'Storage',
-    'Recipe',
-    'Values',
 ];

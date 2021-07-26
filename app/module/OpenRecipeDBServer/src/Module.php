@@ -60,8 +60,8 @@ class Module implements
     public function getModuleDependencies()
     {
         return [
-            'Reinfi\DependencyInjection',
-            'DoctrineORMModule',
+           // 'Reinfi\DependencyInjection',
+           // 'DoctrineORMModule',
         ];
     }
 
