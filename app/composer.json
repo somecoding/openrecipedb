@@ -22,26 +22,16 @@
         "process-timeout": 5000,
         "sort-packages": true
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/Dwarfex/api-tools-documentation-swagger"
-        }
-    ],
     "require": {
         "php": "^8.0",
-        "api-skeletons/oauth2-doctrine-console": "^5.1",
-        "api-skeletons/oauth2-doctrine-identity": "^5.0",
-        "api-skeletons/oauth2-doctrine-permissions-acl": "^5.0",
-        "enlitepro/enlite-monolog": "^2.5",
+        "enlitepro/enlite-monolog": "^3.0@dev",
         "laminas-api-tools/api-tools": "^1.4",
         "laminas-api-tools/api-tools-documentation": "^1.3",
-        "laminas-api-tools/api-tools-documentation-swagger": "dev-patch-1",
+        "laminas-api-tools/api-tools-documentation-swagger": "^1.4",
         "laminas/laminas-component-installer": "^2.1.1",
-        "laminas/laminas-development-mode": "^3.2",
-        "laminas/laminas-mvc-console": "^1.3",
+        "laminas/laminas-development-mode": "^3.3",
+        "laminas/laminas-cli": "^1.1",
         "laminas/laminas-zendframework-bridge": "^1.0",
-        "reinfi/zf-dependency-injection": "^4.1",
         "somecoding/ordb-models": "dev-main"
     },
     "require-dev": {
@@ -49,11 +39,10 @@
         "laminas-api-tools/api-tools-asset-manager": "^1.2",
         "laminas/laminas-coding-standard": "^2.1",
         "laminas/laminas-composer-autoloading": "^2.1",
-        "laminas/laminas-developer-tools": "^1.2.1",
-        "laminas/laminas-test": "^3.4",
+        "laminas/laminas-developer-tools": "^2.1",
+        "laminas/laminas-test": "^4.0@dev",
         "phpunit/phpunit": "^9.5",
-        "roave/security-advisories": "dev-master",
-        "zfcampus/zf-deploy": "^1.3"
+        "roave/security-advisories": "dev-master"
     },
     "conflict": {
         "laminas/laminas-hydrator": "<2.0",
