@@ -1,22 +1,19 @@
 {
-    "name": "laminas-api-tools/api-tools-skeleton",
-    "description": "Skeleton Application for Laminas API Tools",
+    "name": "somecoding/openrecipedb",
+    "description": "Server Application for OpenRecipeDB.org",
     "type": "project",
-    "license": "BSD-3-Clause",
     "keywords": [
         "laminas",
         "api-tools",
         "api",
-        "framework"
+        "open-date",
+        "recipe"
     ],
-    "homepage": "https://api-tools.getlaminas.org",
+    "homepage": "https://www.openrecipedb.org/",
     "support": {
-        "docs": "https://api-tools.getlaminas.org/documentation",
-        "issues": "https://github.com/laminas-api-tools/api-tools-skeleton/issues",
-        "source": "https://github.com/laminas-api-tools/api-tools-skeleton",
-        "rss": "https://github.com/laminas-api-tools/api-tools-skeleton/releases.atom",
-        "chat": "https://laminas.dev/chat",
-        "forum": "https://discourse.laminas.dev"
+        "docs": "https://github.com/somecoding/openrecipedb/README.md",
+        "issues": "https://github.com/somecoding/openrecipedb/issues",
+        "source": "https://github.com/somecoding/openrecipedb",
     },
     "config": {
         "process-timeout": 5000,
