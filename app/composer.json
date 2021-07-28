@@ -13,7 +13,7 @@
     "support": {
         "docs": "https://github.com/somecoding/openrecipedb/README.md",
         "issues": "https://github.com/somecoding/openrecipedb/issues",
-        "source": "https://github.com/somecoding/openrecipedb",
+        "source": "https://github.com/somecoding/openrecipedb"
     },
     "config": {
         "process-timeout": 5000,
