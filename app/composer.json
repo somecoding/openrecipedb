@@ -2,6 +2,7 @@
     "name": "somecoding/openrecipedb",
     "description": "Server Application for OpenRecipeDB.org",
     "type": "project",
+    "license": "GPL-3.0-only",
     "keywords": [
         "laminas",
         "api-tools",
