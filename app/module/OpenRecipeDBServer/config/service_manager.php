@@ -13,6 +13,6 @@ return [
     ],
 
     'invokables' => [
-
+        \OpenRecipeDBServer\Authentication\ApiKeyAuthAdapter::class
     ],
 ];

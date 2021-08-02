@@ -7,8 +7,6 @@
  */
 
 use Laminas\ApiTools\MvcAuth\Factory\NamedOAuth2ServerFactory;
-use Laminas\ApiTools\OAuth2\Service\OAuth2Server;
-return [];
 return [
     'service_manager' => [
         'factories' => [
@@ -18,14 +16,14 @@ return [
     ],
     'api-tools-mvc-auth' => array(
         'authentication' => array(
+            'types' => [
+                'api-token'
+            ],
             'adapters' => array(
-                'oauth2_doctrine' => array(
-                    'adapter' => 'Laminas\\ApiTools\\MvcAuth\\Authentication\\OAuth2Adapter',
-                    'storage' => array(
-                        'storage' => 'oauth2.doctrineadapter.default',
-                        'route' => '/oauth',
-                    ),
-                ),
+                'api-token' => [
+                    'adapter' => 'OpenRecipeDBServer\\Authentication\\ApiKeyAuthAdapter',
+
+                ],
             ),
         ),
     ),

@@ -11,7 +11,7 @@ return [
     'doctrine' => [
         'connection' => [
             'orm_default' => [
-                'driverClass' => \Doctrine\DBAL\Driver\PDO\MySQL\Driver::class,
+                'driverClass' => 'Doctrine\\DBAL\\Driver\\PDO\\MySQL\\Driver',
                 'params' => [
                     'host' => 'ordb-mysql',
                     'port' => '3306',
@@ -56,7 +56,7 @@ return [
     'api-tools-mvc-auth' => [
         'authentication' => [
             'map' => [
-                'OpenRecipeDB\\V1' => 'oauth2_doctrine',
+                'OpenRecipeDB\\V1' => 'api-token',
             ],
         ],
     ],

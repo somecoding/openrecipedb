@@ -1,10 +1,21 @@
 <?php
-namespace OpenRecipeDB\V1\Rest\AccessKey;
+namespace OpenRecipeDB\V1\Rest\Recipes;
 
 use Laminas\ApiTools\ApiProblem\ApiProblem;
 use Laminas\ApiTools\Rest\AbstractResourceListener;
+use Laminas\Hydrator\Aggregate\AggregateHydrator;
+use Laminas\Hydrator\ObjectPropertyHydrator;
+use Laminas\Hydrator\ReflectionHydrator;
+use Laminas\Hydrator\Strategy\ClosureStrategy;
+use Laminas\Hydrator\Strategy\CollectionStrategy;
+use Laminas\Hydrator\Strategy\DateTimeFormatterStrategy;
+use Laminas\Hydrator\Strategy\HydratorStrategy;
+use OrdbModels\Recipe\Recipe;
+use OrdbModels\Recipe\RecipeCategory;
+use OrdbModels\Recipe\RecipePartial;
+use OrdbModels\Recipe\Step;
 
-class AccessKeyResource extends AbstractResourceListener
+class RecipesResource extends AbstractResourceListener
 {
     /**
      * Create a resource
@@ -14,6 +25,13 @@ class AccessKeyResource extends AbstractResourceListener
      */
     public function create($data)
     {
+        $hydrator = new RecipeHydrator();
+
+        $data = $data;
+
+        $hydrated = $hydrator->hydrate($data, new RecipesEntity());
+
+        return $hydrated;
         return new ApiProblem(405, 'The POST method has not been defined');
     }
 

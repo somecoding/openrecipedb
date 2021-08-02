@@ -30,4 +30,5 @@ return [
     'Laminas\\ApiTools\\Documentation\\Swagger',
     'Application',
     'OpenRecipeDB',
+    'OpenRecipeDBServer',
 ];

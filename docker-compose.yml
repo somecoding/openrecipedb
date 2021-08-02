@@ -39,6 +39,8 @@ services:
       - PHP_IDE_CONFIG=serverName=php-fpm
     depends_on:
       - mysql
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
  # composer:
  #   container_name: ordb-composer
  #   restart: 'no'
