@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "274d7d54176431e6099d4bf915afaa2a",
+    "content-hash": "19a879c0a8480a8827a88e9922e4050d",
     "packages": [
         {
             "name": "brick/math",
@@ -5618,40 +5618,37 @@
         },
         {
             "name": "laminas/laminas-composer-autoloading",
-            "version": "2.2.0",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-composer-autoloading.git",
-                "reference": "4267d3469df364d8375de1b675436031fd9756c4"
+                "reference": "4cc2a1acc2ac12b9f32f25f2a8cad8d0c2be6baf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-composer-autoloading/zipball/4267d3469df364d8375de1b675436031fd9756c4",
-                "reference": "4267d3469df364d8375de1b675436031fd9756c4",
+                "url": "https://api.github.com/repos/laminas/laminas-composer-autoloading/zipball/4cc2a1acc2ac12b9f32f25f2a8cad8d0c2be6baf",
+                "reference": "4cc2a1acc2ac12b9f32f25f2a8cad8d0c2be6baf",
                 "shasum": ""
             },
             "require": {
-                "laminas/laminas-stdlib": "^3.1",
-                "laminas/laminas-zendframework-bridge": "^1.0",
-                "php": "^7.3 || ~8.0.0"
-            },
-            "replace": {
-                "zfcampus/zf-composer-autoloading": "^2.1.0"
+                "laminas/laminas-cli": "^1.0",
+                "php": "^7.3 || ~8.0.0",
+                "webmozart/assert": "^1.10"
             },
             "require-dev": {
                 "laminas/laminas-coding-standard": "~2.1.4",
                 "mikey179/vfsstream": "^1.6.7",
-                "mockery/mockery": "^1.4.1",
-                "php-mock/php-mock-phpunit": "^2.0",
                 "phpunit/phpunit": "^9.3",
-                "psalm/plugin-mockery": "^0.7.0",
                 "psalm/plugin-phpunit": "^0.15.1",
                 "vimeo/psalm": "^4.6"
             },
-            "bin": [
-                "bin/laminas-composer-autoloading"
-            ],
             "type": "library",
+            "extra": {
+                "laminas": {
+                    "component": "Laminas\\ComposerAutoloading",
+                    "config-provider": "Laminas\\ComposerAutoloading\\ConfigProvider"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Laminas\\ComposerAutoloading\\": "src/"
@@ -5682,7 +5679,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2021-03-22T22:28:12+00:00"
+            "time": "2021-03-29T14:44:29+00:00"
         },
         {
             "name": "laminas/laminas-developer-tools",
