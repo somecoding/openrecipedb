@@ -3,7 +3,7 @@ ENV COMPOSER_HOME=/usr/config/composer
 ARG GITHUB_TOKEN
 RUN composer config -g github-oauth.github.com $GITHUB_TOKEN
 
-FROM php:8.0-fpm
+FROM php:8.5.2RC1-fpm
 ENV COMPOSER_HOME=/usr/config/composer
 ARG USER_ID
 ARG GROUP_ID
