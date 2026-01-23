@@ -1,6 +1,7 @@
 # Open Recipe DB
 
-### Why there is currently no data /-base available: see here: #56
+### Why there is currently no data /-base available: 
+see here: https://github.com/somecoding/openrecipedb/issues/56
 
 ## The Idea
 
