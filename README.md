@@ -1,5 +1,7 @@
 # Open Recipe DB
 
+### Why there is currently no data /-base available: see here: #56
+
 ## The Idea
 
 The idea for ORDB was heavily inspired by OpenFoodFacts.
