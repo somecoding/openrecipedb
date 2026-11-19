@@ -11,9 +11,7 @@ updates:
       interval: "daily"
   # Enable version updates for Docker
   - package-ecosystem: "docker"
-    directories:
-      - "/docker-config"
-      - "/docker/*"
+    directory: "/docker-config"
     schedule:
       interval: "daily"
   # Enable version updates for Docker Compose
