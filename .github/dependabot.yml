@@ -9,3 +9,13 @@ updates:
     directory: "/app" # Location of package manifests
     schedule:
       interval: "daily"
+  # Enable version updates for Docker
+  - package-ecosystem: "docker"
+    directory: "/docker-config"
+    schedule:
+      interval: "daily"
+  # Enable version updates for Docker Compose
+  - package-ecosystem: "docker-compose"
+    directory: "/"
+    schedule:
+      interval: "daily"
