@@ -54,7 +54,7 @@ services:
     expose:
       - "3306"
     container_name: ordb-mysql
-    image: mariadb:10.5
+    image: mariadb:13.0
     environment:
       MYSQL_ROOT_PASSWORD: app
       MYSQL_PASSWORD: app
