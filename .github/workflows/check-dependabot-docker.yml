@@ -1,0 +1,9 @@
+name: "PR: Check Dependabot Docker Coverage"
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  verify-dependabot:
+    uses: somecoding/.github/workflows/pr-check-dependabot-docker.yml@main
