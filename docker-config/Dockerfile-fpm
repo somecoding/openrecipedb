@@ -1,4 +1,4 @@
-FROM composer:2 as COMPOSER
+FROM composer:2.8 as COMPOSER
 ENV COMPOSER_HOME=/usr/config/composer
 ARG GITHUB_TOKEN
 RUN composer config -g github-oauth.github.com $GITHUB_TOKEN
