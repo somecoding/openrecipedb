@@ -55,9 +55,7 @@ return [
     ],
     'api-tools-mvc-auth' => [
         'authentication' => [
-            'map' => [
-                'OpenRecipeDB\\V1' => 'api-token',
-            ],
+            'map' => [],
         ],
     ],
 ];

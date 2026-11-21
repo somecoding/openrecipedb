@@ -53,7 +53,9 @@ class RecipeHydrator extends ReflectionHydrator
             return $this->hydrateValue($name, $value, $data);
         }elseif($namedType === 'DateInterval') {
             $e =1;
-            return new \DateInterval('P1Y');//TODO
+            $dateInterval =new \DateInterval('P1Y');//TODO
+            $reflectionClass = new \ReflectionClass($dateInterval);
+            return $dateInterval;
         }elseif($namedType === Unit::class) {
             $e = 1;
             return new Gramm();//TODO
